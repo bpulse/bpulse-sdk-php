@@ -15,7 +15,7 @@ Add to your composer.json
 
 ```sh
 "require": {
-	"bpulse/bpulse-php-connector": "dev-master"
+	"bpulse/bpulse-sdk-php": "dev-master"
 }
 ```
 
