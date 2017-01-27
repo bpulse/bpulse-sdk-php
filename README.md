@@ -15,7 +15,8 @@ Add to your composer.json
 
 ```sh
 "require": {
-	"bpulse/bpulse-sdk-php": "dev-master"
+	"bpulse/bpulse-sdk-php": "dev-master",
+	"bpulse/bpulse-protobuf-php": "dev-master"
 }
 ```
 
@@ -30,13 +31,13 @@ require 'vendor/autoload.php';
 
 ## STARTING YOUR APPLICATION
 
-the first thing you should to do is generate the PHP classes you'll need to send Pulses. To do this, you need to run the following command on bpulse-php-connector folder
+the first thing you should to do is generate the PHP classes you'll need to send Pulses. To do this, you need to run the following command on bpulse-protobuf-php repository folder located in vendor/bpulse
 
 ```sh
 make build
 ```
 
-The connector needs some configuration properties that indicate the client where to connect so you must provide a properties file, so to do that, append this config.json to your main folder
+The connector needs some configuration properties that indicate the client where to connect so you must provide a properties file, so to do that, append this config.json to the main folder of your application
 
 ```sh
 {
@@ -105,3 +106,7 @@ $connector= new Connector;
 
 $code=$connector->send($pulses); //This return the http response status code
 ```
+
+## License
+
+The Bpulse SDK PHP is licensed under the Apache License 2.0. Details can be found in the LICENSE file.
