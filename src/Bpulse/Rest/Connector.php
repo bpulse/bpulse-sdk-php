@@ -45,15 +45,16 @@ class Connector
 						$v=base64_encode($v);
 					}
 					array_push($aux,$v);
+					$val['values']=$aux;
+					array_push($value_array,$val);
 				}
-				$val['values']=$aux;
-				array_push($value_array,$val);
+
+				$pulse_array['values']=$value_array;
 			}
-			$pulse_array['values']=$value_array;
 			
+			array_push($json['pulse'],$pulse_array);
 		}
 
-		array_push($json['pulse'],$pulse_array);
 		$new_pulses= (json_encode($json));
 		
 
